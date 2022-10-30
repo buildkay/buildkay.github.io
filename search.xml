@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于js两个定时器</title>
+      <link href="/2022/10/30/%E5%85%B3%E4%BA%8Ejs%E4%B8%A4%E4%B8%AA%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+      <url>/2022/10/30/%E5%85%B3%E4%BA%8Ejs%E4%B8%A4%E4%B8%AA%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="关于-js-两个定时器"><a href="#关于-js-两个定时器" class="headerlink" title="关于 js 两个定时器"></a>关于 js 两个定时器</h2><span id="more"></span><h2 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h2><p><strong>间隔一定时间只会执行一次，返回值是一个 number 类型的值</strong></p><ol><li>在指定的毫秒数到达之后执行指定的函数,只执行一次</li><li>设置定时器是 setTimeout()，会返回一个 number 类型的值，清除定时器要使用 clearTimeout()</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;, delay);</span><br><span class="line"><span class="built_in">clearTimeout</span>(timeId);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个定时器，1000毫秒后执行，返回定时器的标示</span></span><br><span class="line"><span class="keyword">var</span> timerId = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line"><span class="built_in">clearTimeout</span>(timerId);</span><br></pre></td></tr></table></figure><hr><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a>setInterval()</h2><p><strong>每间隔一段时间不间断的一直执行下去</strong></p><ol><li>定时调用的函数,可以按照给定的时间(单位毫秒)周期性的调用函数</li><li>设置定时器是 setInterval()，会返回一个 number 类型的值，清除定时器要使用 clearInterval()</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setInterval</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;, delay);</span><br><span class="line"><span class="built_in">clearInterval</span>(timeId);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个定时器，每隔1秒调用一次</span></span><br><span class="line"><span class="keyword">var</span> timerId = <span class="built_in">setInterval</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">toLocaleTimeString</span>());</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line"><span class="built_in">clearInterval</span>(timerId);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> javaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/10/05/hello-world/"/>
+      <url>/2022/10/05/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><span id="more"></span><p>　　今天，我打算把我以前的博客和笔记再一次整理一下，记得去年在学校里就折腾过，现在回看之前写的文章，感慨还是挺多的，写的那个平台都有（CSDN，掘金……）,主要还是感觉写的好乱，我应该把笔记和博客文章分开写的，这次还需要把之前的毛病改一下，以前写笔记，连 markdown 的语法都没有好好的看一下，主要还是靠平台。这次依靠框架记录自己的博客也不用再担心自己的文章被和谐了。（平台和谐的太严重了，我就写一个踩坑记录和新工具的使用记录，都不知道哪里不符合社会主义价值观（国内现状））。</p><p>　　这又是一个新的开始，不过这一次相信我可以坚持下去。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂七杂八 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
